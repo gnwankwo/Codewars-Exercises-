@@ -8,4 +8,17 @@ We are using the digit 1 in 1, 16, 81, 100. The total count is then 4.
 nb_dig(25, 1):
 the numbers of interest are
 1, 4, 9, 10, 11, 12, 13, 14, 19, 21 which squared are 1, 16, 81, 100, 121, 144, 169, 196, 361, 441
-so there are 11 digits `1` for the squares of numbers between 0 and 25.
+so there are 11 digits `1` for the squares of numbers between 0 and 25.#
+
+def nb_dig(n, d):
+  count=0
+  sqrNum=[]
+  for num in range(n):
+	sqrNum.append(str(num**2))
+  return sqrNum
+sequence="".join(sqrNum)
+for num in sequence:
+  if num==d:
+    count=count +1
+    
+print count
